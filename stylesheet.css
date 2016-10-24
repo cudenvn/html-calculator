@@ -1,11 +1,18 @@
+body {
+  font: bold 15px "Comic Sans MS", sans-serif;
+  /*background-image: url("cats.png");*/
+}
+
 #calculator {
   width: 350px;
   height: auto;
   background: rgb(181,240,250);
   border-radius: 5px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 200px;
   padding: 20px;
+  box-shadow: 5px 5px rgb(211,211,211);
+  overflow: hidden;
 }
 
 #screen {
@@ -14,9 +21,10 @@
   border-radius: 5px;
   color: white;
   padding: 10px;
-}
-
-.btn {
+	box-shadow: inset 0px 3px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  text-align: right;
+  line-height: 40px;
   overflow: hidden;
 }
 
@@ -29,7 +37,11 @@
   margin: 10px 10px 0 0;
   padding: 10px;
   text-align: center;
+  user-select: none;
+  box-shadow: 0px 3px rgb(168,168,168);
+  cursor: crosshair;
 }
+
 span.operator {
   background: rgb(165,179,225);
 }
@@ -44,4 +56,17 @@ span.equal {
 
 span.clear {
   background: rgb(227,170,214);
+}
+
+/*hover and active effects*/
+.btn span:hover {
+  background: #A594F6;
+	box-shadow: 0px 3px #6b54d3;
+	color: white;
+}
+
+.btn span:active {
+  background: pink;
+  box-shadow: 0 0;
+  top: 4px;
 }
