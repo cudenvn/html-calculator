@@ -1,0 +1,47 @@
+#calculator {
+  width: 350px;
+  height: auto;
+  background: rgb(181,240,250);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+#screen {
+  background: rgba(0, 0, 0, 0.4);
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
+
+.btn {
+  overflow: hidden;
+}
+
+.btn span {
+  float:left;
+  width: 60px;
+  height: 20px;
+  background: white;
+  border-radius: 5px;
+  margin: 10px 10px 0 0;
+  padding: 10px;
+  text-align: center;
+}
+span.operator {
+  background: rgb(165,179,225);
+}
+
+span.opright {
+  margin-right: 0;
+}
+
+span.equal {
+  background: rgb(75,242,200);
+}
+
+span.clear {
+  background: rgb(227,170,214);
+}
