@@ -1,30 +1,32 @@
-var keys = document.querySelectorAll('#calculator span');
-var operators = ['+', '-', 'x', '÷'];
-var decimalAdded = false;
 
-for(var i = 0; i < keys.length; i++) {
-	keys[i].onclick = function(e) {
-		var input = document.querySelector('.screen');
-		var inputVal = input.innerHTML;
-		var btnVal = this.innerHTML;
+//noooooooooooooooooooooooooooooooooo
 
-		if(btnVal == 'C') {
-			input.innerHTML = '';
-			decimalAdded = false;
-		}
 
-		else if(btnVal == '=') {
-			var equation = inputVal;
-			var lastChar = equation[equation.length - 1];
+var btns = document.querySelectorAll('.btn span');
+var operator = ['+', '-', 'x', '÷'];
+var decPlace = false;
+for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function(e) {
+        var input = document.querySelector('.screen');
+        var inputVal = input.innerHTML;
+        var btnVal = this.innerHTML;
 
-			equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+        if (btnVal == 'C') {
+            input.innerHTML = '';
+            decPlace = false;
+        } else if (btnVal == '=') {
+            var equation = inputVal;
+            var lastChar = equation[equation.length - 1];
 
-			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
-				equation = equation.replace(/.$/, '');
+            equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
 
-			if(equation)
-				input.innerHTML = eval(equation);
+            if (operators.indexOf(lastChar) > -1 || lastChar == '.')
+                equation = equation.replace(/.$/, '');
 
-			decimalAdded = false;
-		}
+            if (equation)
+                input.innerHTML = eval(equation);
+
+            decPlace = false;
+        }
+    }
 }
