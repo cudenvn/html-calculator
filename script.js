@@ -1,37 +1,14 @@
-var buttons = document.querySelectorAll("div > span");
-var operator = ["+", "-", "x", "÷"];
+var buttons = document.querySelectorAll("span");
+var operators = ["+", "-", "x", "÷"];
 var decimalPlace = false;
 for (var i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function(e){
+    //store screen input to var
+    var outputScreen = document.querySelector("#screen");
+    var outputValues = outputScreen.innerHTML;
+    var btnValues = this.innerHTML;
 
+  }
 }
 
 //noooooooooooooooooooooooooooooooooo
-
-var btns = document.querySelectorAll('.btn > span');
-var operator = ['+', '-', 'x', '÷'];
-var decPlace = false;
-for (var i = 0; i < btns.length; i++) {
-    btns[i].onclick = function(e) {
-        var input = document.querySelector('#screen');
-        var inputVal = input.innerHTML;
-        var btnVal = this.innerHTML;
-
-        if (btnVal == 'AC') {
-            input.innerHTML = '';
-            decPlace = false;
-        } else if (btnVal == '=') {
-            var equation = inputVal;
-            var lastChar = equation[equation.length - 1];
-
-            equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
-
-            if (operators.indexOf(lastChar) > -1 || lastChar == '.')
-                equation = equation.replace(/.$/, '');
-
-            if (equation)
-                input.innerHTML = eval(equation);
-
-            decPlace = false;
-        }
-    }
-}
