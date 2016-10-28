@@ -28,7 +28,7 @@ body {
   overflow: hidden;
 }
 
-.btn span {
+.btn button {
   float:left;
   width: 60px;
   height: 20px;
@@ -41,31 +41,30 @@ body {
   box-shadow: 0px 3px rgb(168,168,168);
   cursor: crosshair;
 }
-
-span.operator {
+button.operator {
   background: rgb(165,179,225);
 }
 
-span.opright {
+button.opright {
   margin-right: 0;
 }
 
-span.equal {
+button.equal {
   background: rgb(75,242,200);
 }
 
-span.clear {
+button.clear {
   background: rgb(227,170,214);
 }
 
 /*hover and active effects*/
-.btn span:hover {
+.btn button:hover {
   background: #A594F6;
 	box-shadow: 0px 3px #6b54d3;
 	color: white;
 }
 
-.btn span:active {
+.btn button:active {
   background: pink;
   box-shadow: 0 0;
   top: 4px;
